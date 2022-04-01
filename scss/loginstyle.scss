@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+//변수값들 선언하기
+$메인컬러: #0b2f15;
+$링크메인: #333333;
+$서브컬러: #607867;
+$설명글자: #f7f7f7;
+$제목글자: 24px;
+$기본글자: 14px;
+$pc1420: 1420px;
+$mobile767: 767px;
+$mobile360: 360px;
+//position mixin
+@mixin pos($p: absolute, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $p;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+//respond mixin
+@mixin respond($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+section {
+  font-family: "GmarketSansLight", sans-serif;
+  font-size: 16px;
+  color: #222222;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: block;
+  max-width: 1000px;
+  .loginlogo {
+    padding-top: 50%;
+    color: $메인컬러;
+    @include respond($mobile767){
+      padding-top:30%;
+    }
+    a {
+      font-size: 50px;
+      img {
+        width: 150px;
+        margin: 0 auto;
+      }
+    }
+  }
+  form {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    .container {
+      // padding: 10px 0px;
+      input[type="text"],
+      input[type="password"] {
+        font-family: "GmarketSansLight", sans-serif;
+        font-size: 16px;
+        width: 300px;
+        padding: 12px 20px;
+        display: block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      input[type="password"] {
+        font-family: "GmarketSansLight", sans-serif;
+        margin-top: -1px;
+      }
+      button {
+        font-size: 18px;
+        background-color: $메인컬러;
+        font-family: "GmarketSansBold", sans-serif;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        cursor: pointer;
+        width: 300px;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+      .show {
+        position: absolute;
+        top: 62px;
+        right: 20px;
+        cursor: pointer;
+      }
+
+      .bottom {
+        padding-top: 10px;
+        #Box {
+          @include pos($p: absolute);
+          left:0;
+          overflow: hidden;
+        }
+        .autologin {
+          float: left;
+          padding-left: 70px;
+          background-size: 30px;
+          background-position-x: 0px;
+          background-position-y: 3px;
+          cursor: pointer;
+        }
+        span {
+          padding: 5px 0;
+          &.userid {
+            position: relative;
+            float: right;
+            padding-right: 10px;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+        .psw {
+          float: right;
+          padding-right: 5px;
+        }
+      }
+      .sub {
+        padding-top: 22%;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

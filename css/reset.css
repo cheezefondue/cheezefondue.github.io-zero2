@@ -1,0 +1,61 @@
+h1,h2,h3,h4,h5,ul,ol,li,dl,dt,dd,p,*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+img{
+    vertical-align: top;
+    border:0;
+    /* 이미지 자동 테두리까지 없애기 base외로 주기 */
+}
+address,i,em{
+    font-style: normal;
+    /* 기울기 없애기 */
+}
+.blind{
+    position: absolute;
+    top:-9999px;
+    /* 리더기에 읽힘 */
+}
+hr{
+    display:none;
+}
+/* 글씨체 */
+body{
+    font-family:'Noto Sans KR', "돋움", dotum, sans-serif;
+    font-size: 14px;
+    color:#111;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+.clearFix::after{
+    content:"";
+    display: block;
+    clear: both;
+    /* 인라인요소라 block 처리 */
+    /* after뒤에 뭔가 추가하고 싶을때 */
+}
+/* skipMenu */
+.skipMenu a{
+    display:block;
+    /* 센터로 보내기위해 블락처리 */
+    background:black;
+    color:white;
+    text-align:center;
+    line-height: 50px;
+    position:absolute;
+    /* absolute내용물 만큼 크기가 줄어듬 */
+    width: 100%;
+    top: -999px;
+}
+.skipMenu a:focus{
+    top: 0;
+}
+
+

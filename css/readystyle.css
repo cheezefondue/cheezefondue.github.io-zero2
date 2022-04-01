@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0b2f15;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(325deg, rgba(23, 27, 35, 0.5) 0%, rgba(23, 27, 35, 0.5) 14.286%, rgba(52, 54, 51, 0.5) 14.286%, rgba(52, 54, 51, 0.5) 28.572%, rgba(80, 81, 67, 0.5) 28.572%, rgba(80, 81, 67, 0.5) 42.858%, rgba(109, 108, 84, 0.5) 42.858%, rgba(109, 108, 84, 0.5) 57.144%, rgba(137, 134, 100, 0.5) 57.144%, rgba(137, 134, 100, 0.5) 71.43%, rgba(166, 161, 116, 0.5) 71.43%, rgba(166, 161, 116, 0.5) 85.716%, rgba(194, 188, 132, 0.5) 85.716%, rgba(194, 188, 132, 0.5) 100.002%), linear-gradient(323deg, #096a07 0%, #096a07 14.286%, #157f2c 14.286%, #157f2c 28.572%, #229551 28.572%, #229551 42.858%, #2eaa76 42.858%, #2eaa76 57.144%, #3abf9b 57.144%, #3abf9b 71.43%, #47d5c0 71.43%, #47d5c0 85.716%, #53eae5 85.716%, #53eae5 100.002%);
+}
+
+section {
+  font-family: "GmarketSansBold", sans-serif;
+  color: #0b2f15;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+section h1 img {
+  padding-top: 5%;
+  width: 10%;
+}
+@media screen and (max-width: 767px) {
+  section h1 img {
+    padding-top: 15%;
+    width: 10%;
+  }
+}
+section div {
+  padding-bottom: 6%;
+}
+section div a img {
+  width: 300px;
+}

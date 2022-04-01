@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 레이아웃 */
+body {
+  font-family: "GmarketSansLight", sans-serif;
+  position: relative;
+  left: 50%;
+  color: #0b2f15;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    color: #333333;
+    word-break: keep-all;
+  }
+}
+body .container {
+  padding-bottom: 10%;
+  padding: 150px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  body .container {
+    padding: 150px 0;
+    margin: 0;
+  }
+}
+body .container .innerBox {
+  padding: 35px;
+  width: 95%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  body .container .innerBox {
+    padding: 0;
+    margin: 0;
+  }
+}
+body .container .innerBox h1 {
+  line-height: 2;
+}
+body .container .innerBox .sign,
+body .container .innerBox form {
+  margin: 0 auto;
+  padding: 35px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 5px solid #0b2f15;
+}
+body .container .innerBox .sign table,
+body .container .innerBox form table {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 35px;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  body .container .innerBox .sign table,
+body .container .innerBox form table {
+    padding: 0;
+    margin: 0;
+  }
+}
+body .container .innerBox .sign table table,
+body .container .innerBox .sign table tr,
+body .container .innerBox .sign table td,
+body .container .innerBox form table table,
+body .container .innerBox form table tr,
+body .container .innerBox form table td {
+  line-height: 2;
+  padding: 15px;
+}
+@media screen and (max-width: 767px) {
+  body .container .innerBox .sign table table,
+body .container .innerBox .sign table tr,
+body .container .innerBox .sign table td,
+body .container .innerBox form table table,
+body .container .innerBox form table tr,
+body .container .innerBox form table td {
+    padding: 15px 0;
+  }
+  body .container .innerBox .sign table table input#address,
+body .container .innerBox .sign table tr input#address,
+body .container .innerBox .sign table td input#address,
+body .container .innerBox form table table input#address,
+body .container .innerBox form table tr input#address,
+body .container .innerBox form table td input#address {
+    width: 95%;
+  }
+}

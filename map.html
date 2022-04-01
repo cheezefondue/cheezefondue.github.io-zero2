@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="zero"> 
+    <meta property="og:image" content="http://u2525u.dothome.co.kr/images/icon_zero.svg">
+    <!-- <meta property="og:image" content="http://u2525u.dothome.co.kr/11st/images/img.png"> -->
+    <meta property="og:description" content="zero웹사이트">
+    <title>다른 이미지로 마커 생성하기</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/ui-toggle.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/map.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.toggler.js"></script>
+    <script src="js/connectzero.js"></script>
+</head>
+<body>
+      <!-- header -->
+      <header>
+        <div class="headTop clearFix">
+            <div class="innerBox">
+                <input id="Box" type="checkbox" class="checkbox ui-stoggle--hidden">
+                 </div>
+            <ul class="gnb">
+                <li><a href="">KOR</a></li>
+                <li><a href="">ENG</a></li>
+            </ul>  
+        </div>
+        <div class="headBottom clearFix">
+            <div class="innerBox">
+                <h1 class="logo"><a href="index.html">　</a></h1>
+                <div id="Menu">
+                    <div class="mham"><a href="#void">
+                     </a></div>
+                    <div id="nav">
+                        <ul class="navli">
+                            <li>
+                                <a href="#void">ABOUT</a>
+                                <ul class="nav">
+                                    <li><a href="#void">ZERO WASTE</a></li>
+                                    <li><a href="map.html">MAP</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#void">STORY</a>
+                            </li>
+                            <li>
+                                <a href="ready.html">PAIRING</a>
+                            </li>
+                            <li>
+                                <a href="ready.html">SHOPPING</a>
+                                <ul class="nav">
+                                    <li><a href="ready.html">NEW</a></li>
+                                    <li><a href="ready.html">화장지<img src="icon/icon_paper.svg" alt=""></a></li>
+                                    <li><a href="ready.html">빗<img src="icon/icon_comb.svg" alt=""></a></li>
+                                    <li><a href="ready.html">유리병<img src="icon/icon_bottle.svg" alt=""></a></li>
+                                    <li><a href="ready.html">칫솔/치약<img src="icon/icon_toothbrush.svg" alt=""></a></li>
+                                    <li><a href="ready.html">종이컵<img src="icon/icon_papercup.svg" alt=""></a></li>
+                                    <li><a href="ready.html">빨대<img src="icon/icon_straw.svg" alt=""></a></li>
+                                    <li><a href="ready.html">비누<img src="icon/icon_soap.svg" alt=""></a></li>
+                                    <li><a href="ready.html">생분해망<img src="icon/icon_net.svg" alt=""></a></li>
+                                    <li><a href="ready.html">세제<img src="icon/icon_cleaner.svg" alt=""></a></li>
+                                    <li><a href="ready.html">수저세트<img src="icon/icon_spoonset.svg" alt=""></a></li>
+                                    <li><a href="ready.html">알뜰 쇼핑</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="ready.html">NEWS/EVENT</a>
+                                <ul class="nav">
+                                    <li><a href="ready.html">NEWS</a></li>
+                                    <li><a href="ready.html">EVENT</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="mnav">
+                         <li>
+                             <a href="#void">ABOUT</a>
+                             <ul class="sub">
+                                 <li><a href="#void">ZERO WASTE</a></li>
+                                 <li><a href="map.html">MAP</a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="#void">STORY</a>
+                         </li>
+                         <li>
+                             <a href="ready.html">PAIRING</a>
+                         </li>
+                         <li>
+                             <a href="#void">SHOPPING</a>
+                             <ul class="sub">
+                                 <li><a href="#void">NEW</a></li>
+                                 <li><a href="#void">화장지<img src="icon/icon_paper.svg" alt=""></a></li>
+                                 <li><a href="#void">빗<img src="icon/icon_comb.svg" alt=""></a></li>
+                                 <li><a href="#void">유리병<img src="icon/icon_bottle.svg" alt=""></a></li>
+                                 <li><a href="#void">칫솔/치약<img src="icon/icon_toothbrush.svg" alt=""></a></li>
+                                 <li><a href="#void">종이컵<img src="icon/icon_papercup.svg" alt=""></a></li>
+                                 <li><a href="#void">빨대<img src="icon/icon_straw.svg" alt=""></a></li>
+                                 <li><a href="#void">비누<img src="icon/icon_soap.svg" alt=""></a></li>
+                                 <li><a href="#void">생분해망<img src="icon/icon_net.svg" alt=""></a></li>
+                                 <li><a href="#void">세제<img src="icon/icon_cleaner.svg" alt=""></a></li>
+                                 <li><a href="#void">수저세트<img src="icon/icon_spoonset.svg" alt=""></a></li>
+                                 <li><a href="#void">알뜰 쇼핑</a></li>
+                             </ul>
+                         </li>
+                         <li>
+                             <a href="#void">NEWS/EVENT</a>
+                             <ul class="sub">
+                                 <li><a href="#void">NEWS</a></li>
+                                 <li><a href="#void">EVENT</a></li>
+                             </ul>
+                         </li>
+                     </ul>
+                    </div>   
+                    <ul class="subgnb">
+                        <li><a href="login.html"><img src="icon/icon_login.svg" alt=""></a></li>
+                        <li><a href="#void"><img src="icon/icon_my.svg" alt=""></a></li>
+                        <li><a href="ready.html"><img src="icon/icon_bag.svg" alt=""></a></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+     </header>
+
+    <div id="Wrap">
+        <h1>찾아오시는길</h1>
+            <h3>인천공항에서 오는 법</h3>
+            <ul>
+                <li>지하철 : 인천국제공항(공항선) - 공덕역(6호선으로 환승) - 안암역</li>
+                <li>리무진 버스 : 6101번(김포공항 경유), 6102번 (고려대역, 숭례초교정류장)</li>
+            </ul>
+           <h3>김포공항에서 오는 법</h3>
+            <ul>
+                <li>지하철 : 김포공항역(공항선) - 공덕역(6호선으로 환승) - 고려대역 또는 안암역</li>
+                <li>리무진 버스 : 6101번(수락터미널방면) - 고려대역, 숭례초교정류장 하차</li>
+            </ul>
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        <div class="foot">
+            <div class="left">
+                <div class="data">
+                    <a href="index.html"><img src="icon/icon_zero.svg" alt=""></a>
+                    <address>
+                        <p><a href="#void">상호명: 제로(웨이스트코리아)(주)</a></p>
+                        <p><a href="#void">서울특별시 성북구 안암로 145 고려대학교 산학관 502호</a></p>
+                        <p><a href="#void">대표자: 이제로</a></p>
+                        <p><a href="#void">사업자 등록번호: 486-86-01010</a></p>
+                        <p><a href="#void">통신판매번호-2021-서울동대문-0234</a></p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="data">
+                <h3>BANKINFO</h3>
+                <div>
+                    <p><a href="#void">IBK기업 201-123456-01-010</a></p>
+                    <p><a href="#void">제로(웨이스트코리아)(주)</a></p>
+                </div>
+                <ul class="bottom">
+                    <li><a href="#void">회사소개</a></li>
+                    <li><a href="#void">사업자정보확인</a></li>
+                    <li><a href="#void">개인정보취급방침</a></li>
+                    <li><a href="#void">이용안내</a></li>
+                    <li><a href="#void">이용약관</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="data">
+                <h3>CUSTOMER CENTER</h3>
+                <p><a href="#void">02-135-1595</a></p>
+                <p><a href="#void">평일: 10:00 - 17:00</a></p>
+                <p><a href="#void">점심: 11:30 - 12:30</a></p>
+                <p><a href="#void">토, 일요일 및 공휴일 휴무</a></p>
+            </div>
+        </div>
+        <div class="topBtn"><a href="#"><img src="icon/icon_top.svg" alt=""></a></div>
+    </footer>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c85532fd90454c8a983e03897e3c5843"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = {
+        center: new kakao.maps.LatLng(37.588522,127.03295), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+var imageSrc = 'icon/mapzero.svg', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(38, 60), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(19, 60)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.588522,127.03295); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition,
+    image: markerImage // 마커이미지 설정
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);  
+</script>
+</body>
+</html>

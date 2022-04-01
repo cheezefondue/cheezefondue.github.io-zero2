@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+section {
+  position: relative;
+  font-family: "GmarketSansLight", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  padding: 10% 0;
+  background: url(../img/wmain.gif) no-repeat center center;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  section {
+    background: url(../img/wmain.gif) repeat 5%;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767px) {
+  section .Wrap {
+    padding: 15% 0;
+  }
+}
+section .Wrap img {
+  border-radius: 5%;
+}
+section .Wrap .story {
+  padding: 30px;
+}
+section .Wrap .story h2,
+section .Wrap .story p {
+  text-align: center;
+  padding: 0;
+  line-height: 2;
+}
+@media screen and (max-width: 767px) {
+  section .Wrap .story h2,
+section .Wrap .story p {
+    text-align: left;
+  }
+}
+section .Wrap .story h2 {
+  padding: 35px 0;
+}
+section .Wrap .story p {
+  font-size: 16px;
+}
+@media screen and (max-width: 767px) {
+  section .Wrap .sub img {
+    width: 70%;
+  }
+}

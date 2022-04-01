@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+section {
+  width: 50%;
+  font-family: "GmarketSansLight", sans-serif;
+  color: #0b2f15;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  section {
+    width: 100%;
+  }
+}
+section div {
+  padding: 35px 0;
+  margin: 15px 0;
+}
+section h1 {
+  padding: 65px 0 35px 0;
+}
+section .Wrap {
+  border: 1px dashed #0b2f15;
+}
+section .Wrap p,
+section .Wrap ul {
+  padding-top: 15px;
+}
+section .Wrap p {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  section .Wrap p {
+    width: 100%;
+  }
+}
+section .Wrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+section .Wrap li {
+  padding: 15px 30px;
+  width: 320px;
+}
+section .Wrap img {
+  width: 375px;
+}
+@media screen and (max-width: 767px) {
+  section .Wrap img {
+    width: 100%;
+  }
+}

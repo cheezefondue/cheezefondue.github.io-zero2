@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+//변수값들 선언하기
+$메인컬러: #0b2f15;
+$링크메인: #333333;
+$서브컬러: #607867;
+$설명글자: #f7f7f7;
+$제목글자: 24px;
+$기본글자: 14px;
+$mobile767: 767px;
+$mobile360: 360px;
+//position mixin
+@mixin pos($p: absolute, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $p;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+//respond mixin
+@mixin respond($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+/* 레이아웃 */
+body {
+  font-family: "GmarketSansLight", sans-serif;
+  position: relative;
+  left: 50%;
+  // transform: translateX(-50%);
+  color: $메인컬러;
+  @include respond($mobile767) {
+    font-size: 14px;
+    color: $링크메인;
+    word-break: keep-all;
+  }
+  .container {
+    padding-bottom: 10%;
+    padding: 150px;
+    text-align: center;
+    @include respond($mobile767) {
+      padding: 150px 0;
+      margin: 0;
+    }
+    .innerBox {
+      padding: 35px;
+      width: 95%;
+      margin: 0 auto;
+      @include respond($mobile767) {
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        line-height: 2;
+      }
+      .sign,
+      form {
+        margin: 0 auto;
+        padding: 35px 0;
+        box-sizing: border-box;
+        border-top: 5px solid $메인컬러;
+        table {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 35px;
+          text-align: left;
+          @include respond($mobile767) {
+            padding: 0;
+            margin: 0;
+          }
+          table,
+          tr,
+          td {
+            line-height: 2;
+            padding: 15px;
+            @include respond($mobile767) {
+              padding: 15px 0;
+              input#address {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

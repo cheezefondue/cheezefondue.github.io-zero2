@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$메인컬러: #0b2f15;
+$mobile767: 767px;
+
+//respond mixin
+@mixin respond($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+// 스크롤바
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $메인컬러;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+      325deg,
+      rgba(23, 27, 35, 0.5) 0%,
+      rgba(23, 27, 35, 0.5) 14.286%,
+      rgba(52, 54, 51, 0.5) 14.286%,
+      rgba(52, 54, 51, 0.5) 28.572%,
+      rgba(80, 81, 67, 0.5) 28.572%,
+      rgba(80, 81, 67, 0.5) 42.858%,
+      rgba(109, 108, 84, 0.5) 42.858%,
+      rgba(109, 108, 84, 0.5) 57.144%,
+      rgba(137, 134, 100, 0.5) 57.144%,
+      rgba(137, 134, 100, 0.5) 71.43%,
+      rgba(166, 161, 116, 0.5) 71.43%,
+      rgba(166, 161, 116, 0.5) 85.716%,
+      rgba(194, 188, 132, 0.5) 85.716%,
+      rgba(194, 188, 132, 0.5) 100.002%
+    ),
+    linear-gradient(
+      323deg,
+      rgb(9, 106, 7) 0%,
+      rgb(9, 106, 7) 14.286%,
+      rgb(21, 127, 44) 14.286%,
+      rgb(21, 127, 44) 28.572%,
+      rgb(34, 149, 81) 28.572%,
+      rgb(34, 149, 81) 42.858%,
+      rgb(46, 170, 118) 42.858%,
+      rgb(46, 170, 118) 57.144%,
+      rgb(58, 191, 155) 57.144%,
+      rgb(58, 191, 155) 71.43%,
+      rgb(71, 213, 192) 71.43%,
+      rgb(71, 213, 192) 85.716%,
+      rgb(83, 234, 229) 85.716%,
+      rgb(83, 234, 229) 100.002%
+    );
+}
+section {
+  h1{
+    img {
+      padding-top: 5%;
+      width: 10%;
+      @include respond($mobile767){
+        padding-top: 15%;
+        width: 10%;
+      }
+    }
+  }
+    div{  
+        padding-bottom: 6%;
+        a{
+      img {
+            
+              width:300px;
+          }
+       }
+  }
+  font-family: "GmarketSansBold", sans-serif;
+  color: $메인컬러;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  // padding-bottom: 6%;
+}

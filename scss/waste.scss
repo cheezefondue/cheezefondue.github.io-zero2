@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+$메인컬러: #0b2f15;
+$제목글자: 24px;
+$기본글자: 14px;
+$mobile767: 767px;
+//respond mixin
+@mixin respond($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+section {
+  width: 50%;
+  font-family: "GmarketSansLight", sans-serif;
+  color: $메인컬러;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  @include respond($mobile767) {
+    width: 100%;
+  }
+  div {
+    padding: 35px 0;
+    margin: 15px 0;
+  }
+  h1 {
+    padding: 65px 0 35px 0;
+  }
+  .Wrap {
+    border: 1px dashed $메인컬러;
+    p,
+    ul {
+      padding-top: 15px;
+    }
+    p {
+      width: 100%;
+      margin: 0 auto;
+      @include respond($mobile767) {
+        width: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    li {
+      padding: 15px 30px;
+      width: 320px;
+    }
+    img {
+      width: 375px;
+      @include respond($mobile767) {
+        width: 100%;
+      }
+    }
+  }
+}
