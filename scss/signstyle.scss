@@ -64,7 +64,11 @@ body {
         margin: 0;
       }
       h1 {
-        line-height: 2;
+          line-height: 2;
+        @include respond($mobile767) {
+          padding: 15px;
+          margin: 0;        
+        }
       }
       .sign,
       form {
@@ -72,16 +76,15 @@ body {
         padding: 35px 0;
         box-sizing: border-box;
         border-top: 5px solid $메인컬러;
+        @include respond($mobile767) {
+          border-top:none;   
+        }
         table {
           position: relative;
           left: 50%;
           transform: translateX(-50%);
           padding: 35px;
           text-align: left;
-          @include respond($mobile767) {
-            padding: 0;
-            margin: 0;
-          }
           table,
           tr,
           td {

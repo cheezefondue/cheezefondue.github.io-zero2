@@ -50,6 +50,12 @@ body .container .innerBox {
 body .container .innerBox h1 {
   line-height: 2;
 }
+@media screen and (max-width: 767px) {
+  body .container .innerBox h1 {
+    padding: 15px;
+    margin: 0;
+  }
+}
 body .container .innerBox .sign,
 body .container .innerBox form {
   margin: 0 auto;
@@ -57,6 +63,12 @@ body .container .innerBox form {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-top: 5px solid #0b2f15;
+}
+@media screen and (max-width: 767px) {
+  body .container .innerBox .sign,
+body .container .innerBox form {
+    border-top: none;
+  }
 }
 body .container .innerBox .sign table,
 body .container .innerBox form table {
@@ -66,13 +78,6 @@ body .container .innerBox form table {
           transform: translateX(-50%);
   padding: 35px;
   text-align: left;
-}
-@media screen and (max-width: 767px) {
-  body .container .innerBox .sign table,
-body .container .innerBox form table {
-    padding: 0;
-    margin: 0;
-  }
 }
 body .container .innerBox .sign table table,
 body .container .innerBox .sign table tr,
