@@ -204,7 +204,11 @@ header .headBottom #Menu #nav .navli li .nav li {
   font-family: "GmarketSansLight", sans-serif;
   display: none;
   width: 140px;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
+}
+header .headBottom #Menu #nav .navli li:hover li {
+  display: block;
 }
 header .headBottom #Menu #nav .mnav {
   display: none;
@@ -289,7 +293,6 @@ header .headBottom #Menu .subgnb li {
   position: relative;
   top: 80px;
   display: block;
-  z-index: 5;
 }
 #mainBanner .banner {
   display: -webkit-box;
