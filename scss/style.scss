@@ -303,8 +303,12 @@ header {
                 font-family: "GmarketSansLight", sans-serif;
                 display: none;
                 width: 140px;
+                margin: 0 auto;
                 background-color: rgba(255, 255, 255, 0.5);
               }
+            }
+            &:hover li {
+              display: block;
             }
           }
         }
@@ -402,7 +406,6 @@ header {
 #mainBanner {
   @include pos($p:relative, $top: 80px);
   display: block;
-  z-index: 5;
   .banner {
     display: flex;
     display: block;
@@ -412,7 +415,6 @@ header {
       }
     }
   }
-
   .btn {
     @include pos($p: absolute, $bottom: 0px);
     z-index: 5;
@@ -426,11 +428,9 @@ header {
     ul {
       float: left;
       padding-top: 20px;
-
       li {
         float: left;
         width: 50px;
-
         a {}
       }
     }
