@@ -288,26 +288,26 @@ header .headBottom #Menu .subgnb li {
 #mainBanner {
   position: relative;
   top: 80px;
+  display: block;
   z-index: 5;
-  overflow: hidden;
 }
 #mainBanner .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: block;
 }
 #mainBanner .banner li img {
   width: 100%;
 }
 #mainBanner .btn {
   position: absolute;
-  bottom: -55px;
+  bottom: 0px;
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
+  border-radius: 100px 100px 0 0;
   width: 150px;
-  height: 150px;
-  line-height: 150px;
+  height: 80px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
