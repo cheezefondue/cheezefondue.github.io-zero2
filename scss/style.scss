@@ -590,6 +590,7 @@ section {
       transform: translate(-50%);
 
       @include respond($mobile767) {
+        height: 300px;
         width: 90%;
       }
     }

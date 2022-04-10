@@ -505,6 +505,7 @@ section .reviewWrap iframe {
 }
 @media screen and (max-width: 767px) {
   section .reviewWrap iframe {
+    height: 300px;
     width: 90%;
   }
 }
