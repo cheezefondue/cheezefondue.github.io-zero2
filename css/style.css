@@ -163,7 +163,7 @@ header .headBottom #Menu #nav .navli {
   display: -ms-flexbox;
   display: flex;
   height: 40px;
-  width: 130px;
+  width: 140px;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -178,9 +178,6 @@ header .headBottom #Menu #nav .navli li {
   margin: 0 6%;
   line-height: 3;
 }
-header .headBottom #Menu #nav .navli li a {
-  padding: 0 1%;
-}
 header .headBottom #Menu #nav .navli li a img {
   margin: 0;
   width: 40%;
@@ -189,6 +186,7 @@ header .headBottom #Menu #nav .navli li:hover {
   border-bottom: 2px solid #0b2f15;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: block;
 }
 header .headBottom #Menu #nav .navli li .nav {
   display: -webkit-box;
@@ -207,9 +205,6 @@ header .headBottom #Menu #nav .navli li .nav li {
   display: none;
   width: 140px;
   background-color: rgba(255, 255, 255, 0.5);
-}
-header .headBottom #Menu #nav .navli li:hover li {
-  display: block;
 }
 header .headBottom #Menu #nav .mnav {
   display: none;
@@ -333,7 +328,7 @@ section .iconWrap ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 35px;
+  padding: 30px 0 15px 0;
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -413,6 +408,10 @@ section .iconWrap ul .bg .btn {
 }
 section .itemWrap {
   background: #607867;
+  text-align: center;
+}
+section .itemWrap h2 {
+  padding: 35px 0;
 }
 section .itemWrap .List {
   display: -webkit-box;
@@ -422,13 +421,11 @@ section .itemWrap .List {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: center;
-  padding-bottom: 35px;
   padding-left: 7%;
 }
 section .itemWrap .List li {
   width: calc(100% / 3);
-  padding: 15px 0;
+  padding: 35px 0;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -452,7 +449,7 @@ section .itemWrap .List li .btn {
   width: 70px;
   height: 30px;
   line-height: 30px;
-  left: 40%;
+  left: 39%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -460,7 +457,6 @@ section .itemWrap .List li .btn {
   section .itemWrap .List li .btn {
     position: absolute;
     top: 45%;
-    left: 39%;
   }
 }
 @media screen and (max-width: 360px) {
@@ -479,7 +475,7 @@ section .itemWrap .List li .btn:hover {
 section .itemWrap .List li span a {
   position: relative;
   top: 75%;
-  right: 33%;
+  right: 35%;
   z-index: 5;
 }
 section .itemWrap .List li span a img {
@@ -490,11 +486,18 @@ section .itemWrap .List li span a:hover {
   -webkit-transition: 1s;
   transition: 1s;
 }
+section .reviewWrap h2 {
+  padding: 35px 0;
+  text-align: center;
+}
 section .reviewWrap p {
   text-align: center;
-  padding: 15px 0;
+  padding: 0 0 35px 0;
+  line-height: 2;
 }
 section .reviewWrap iframe {
+  width: 700px;
+  height: 400px;
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -512,9 +515,14 @@ section .reviewWrap .textWrap {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
+section .reviewWrap .textWrap p {
+  padding: 15px 0 0 0;
+  font-size: 16px;
+}
 section .reviewWrap .textWrap .btn {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  padding: 0 0 15px 0;
 }
 section .reviewWrap .textWrap .btn a:hover {
   -webkit-transition: 0.3s;
@@ -544,8 +552,9 @@ section .newsWrap .new {
 }
 section .newsWrap .new .news {
   position: relative;
-  margin: 0 0px;
+  margin: 0;
   padding: 10px;
+  margin: 0 0 35px 0;
   border: 1px solid #f7f7f7;
   border-radius: 10px;
   background: #f7f7f7;
@@ -572,6 +581,7 @@ section .newsWrap .newsList {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 0 0 35px 0;
 }
 section .newsWrap .newsList li {
   border: 1px solid #f7f7f7;
@@ -613,28 +623,32 @@ section .newsWrap .newsList li .morebtn a:hover {
 section .contentWrap {
   background: #607867;
 }
-section .contentWrap .newsList {
+section .contentWrap .newList {
   padding: 35px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  line-height: 2;
 }
 @media screen and (max-width: 767px) {
-  section .contentWrap .newsList {
+  section .contentWrap .newList {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-section .contentWrap .newsList .subTitle {
+section .contentWrap .newList .subTitle {
+  font-size: 16px;
+  color: white;
   padding: 35px 0;
+  width: 100%;
 }
-section .contentWrap .newsList li {
-  padding: 35px 0;
-  width: 200px;
+section .contentWrap .newList li {
+  width: 265px;
 }
-section .contentWrap .newsList li a {
+section .contentWrap .newList li a {
   color: #b5beb8;
 }
 section .contentWrap .insta {
@@ -646,19 +660,17 @@ section .contentWrap .insta img {
   padding: 0 35px;
   width: 55px;
 }
-section .siteWrap,
-section h2 {
+section .siteWrap h2 {
   padding: 35px;
   text-align: center;
 }
-section .siteWrap .sitename,
-section h2 .sitename {
+section .siteWrap h2 .sitename {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-section .siteWrap .sitename img,
-section h2 .sitename img {
+section .siteWrap h2 .sitename img {
+  margin: 35px;
   width: 100%;
 }
 

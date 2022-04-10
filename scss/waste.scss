@@ -31,6 +31,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  line-height: 2;
   @include respond($mobile767) {
     width: 100%;
   }
@@ -43,6 +44,12 @@ section {
   }
   .Wrap {
     border: 1px dashed $메인컬러;
+    border-radius: 45px;
+    background: ivory;
+    h3{
+      padding-bottom:35px;
+      border-bottom: 1px dashed $메인컬러;
+    }
     p,
     ul {
       padding-top: 15px;

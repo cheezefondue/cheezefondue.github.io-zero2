@@ -97,6 +97,6 @@ $(function(){
 function Check(){
     result = confirm('구매하시겠습니까?');
     if(result==true){
-        alert('장바구니에 담겼습니다.');
+        alert('장바구니에 담겼습니다. 지금 이동하시겠습니까?');
     }
 }

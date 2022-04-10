@@ -205,7 +205,8 @@
 .slick-dots li.slick-active button:before
 {
     line-height: 10px;
-    content: '•';
+    /* content: '•'; */
+    content: '。';
     opacity: 1;
     color: #0b2f15;
     transition: 2.7s;

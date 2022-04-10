@@ -19,6 +19,7 @@ section {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: center;
+  line-height: 2;
 }
 @media screen and (max-width: 767px) {
   section {
@@ -34,6 +35,12 @@ section h1 {
 }
 section .Wrap {
   border: 1px dashed #0b2f15;
+  border-radius: 45px;
+  background: ivory;
+}
+section .Wrap h3 {
+  padding-bottom: 35px;
+  border-bottom: 1px dashed #0b2f15;
 }
 section .Wrap p,
 section .Wrap ul {

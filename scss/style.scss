@@ -1,17 +1,17 @@
 @font-face {
   font-family: "GmarketSansBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "GmarketSansLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 //변수값들 선언하기
 $메인컬러: #0b2f15;
 $링크메인: #333333;
@@ -21,6 +21,7 @@ $제목글자: 24px;
 $기본글자: 14px;
 $mobile767: 767px;
 $mobile360: 360px;
+
 //position mixin
 @mixin pos($p: absolute, $top: null, $right: null, $bottom: null, $left: null) {
   position: $p;
@@ -29,36 +30,42 @@ $mobile360: 360px;
   bottom: $bottom;
   left: $left;
 }
+
 //respond mixin
 @mixin respond($size) {
   @media screen and (max-width: $size) {
     @content;
   }
 }
+
 /* 레이아웃 */
 body {
   font-family: "GmarketSansLight", sans-serif;
   word-break: keep-all;
   @include pos($left:0%);
+
   @include respond($mobile767) {
     font-size: 14px;
     color: $링크메인;
   }
 }
+
 // 스크롤바
 ::-webkit-scrollbar {
   width: 16px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: $메인컬러;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(
-      325deg,
+  background-image: linear-gradient(325deg,
       rgba(23, 27, 35, 0.5) 0%,
       rgba(23, 27, 35, 0.5) 14.286%,
       rgba(52, 54, 51, 0.5) 14.286%,
@@ -72,10 +79,8 @@ body {
       rgba(166, 161, 116, 0.5) 71.43%,
       rgba(166, 161, 116, 0.5) 85.716%,
       rgba(194, 188, 132, 0.5) 85.716%,
-      rgba(194, 188, 132, 0.5) 100.002%
-    ),
-    linear-gradient(
-      323deg,
+      rgba(194, 188, 132, 0.5) 100.002%),
+    linear-gradient(323deg,
       rgb(9, 106, 7) 0%,
       rgb(9, 106, 7) 14.286%,
       rgb(21, 127, 44) 14.286%,
@@ -89,9 +94,9 @@ body {
       rgb(71, 213, 192) 71.43%,
       rgb(71, 213, 192) 85.716%,
       rgb(83, 234, 229) 85.716%,
-      rgb(83, 234, 229) 100.002%
-    );
+      rgb(83, 234, 229) 100.002%);
 }
+
 // ::-webkit-scrollbar-button:start:decrement,
 // ::-webkit-scrollbar-button:end:increment {
 //   width: 16px;
@@ -133,12 +138,13 @@ body {
 // }
 
 .innerBox {
-  width:100%;
+  width: 100%;
   // background-color: rgba(255, 0, 0, 0.1);
   margin: 0 auto;
   position: relative;
   box-sizing: border-box;
 }
+
 /*  header  */
 header {
   @include pos($p: fixed, $top: 0, $left: 0);
@@ -146,14 +152,17 @@ header {
   background: $메인컬러;
   width: 100%;
   height: 40px;
+
   .headTop {
     .innerBox {
       @include pos($p: absolute);
       left: 50%;
       transform: translatex(-50%);
+
       @include respond($mobile767) {
         display: none;
       }
+
       #Box {
         @include pos($p: absolute);
         background: #fff;
@@ -171,6 +180,7 @@ header {
         // }
       }
     }
+
     .gnb {
       float: right;
       top: 0;
@@ -178,10 +188,12 @@ header {
       li {
         float: left;
         padding: 12px;
+
         a {
           top: 5px;
           color: #fff;
         }
+
         &::after {
           content: "";
           display: block;
@@ -195,16 +207,20 @@ header {
       }
     }
   }
+
   .headBottom {
     background-color: #fff;
+
     .logo {
       background: url(../icon/icon_zero.svg) no-repeat left center;
       background-size: 8%;
       padding-top: 15px;
+
       @include respond($mobile767) {
         background-position-x: 30px;
         background-size: 20%;
       }
+
       a {
         width: 200px;
         padding: 13px 0 0 90px;
@@ -216,6 +232,7 @@ header {
       .mham {
         z-index: 7;
         display: none;
+
         @include respond($mobile767) {
           display: block;
           background: url(../icon/icon_ham.svg) no-repeat;
@@ -223,6 +240,7 @@ header {
           width: 50px;
           height: 50px;
           @include pos($p: absolute, $top: 0px);
+
           &.active {
             background-size: 45px;
             background: url(../icon/icon_ham1.svg) no-repeat;
@@ -230,48 +248,57 @@ header {
           }
         }
       }
+
       #nav {
         @include pos($p: absolute, $top: 0px);
         max-width: 1200px;
         margin: 0 auto;
         left: 20%;
         height: 100%;
+
         @include respond($mobile767) {
           @include pos($top: 43px);
           position: absolute;
           left: 0%;
           z-index: 6;
         }
+
         .navli {
           transform: translateX(-50%);
           display: flex;
           height: 40px;
-          width: 130px;
+          width: 140px;
           text-align: center;
+
           @include respond($mobile767) {
             display: none;
           }
+
           li {
             font-size: 17px;
             font-family: "GmarketSansBold", sans-serif;
             width: 100%;
             margin: 0 6%;
             line-height: 3;
+
             a {
-              padding: 0 1%;
               img {
                 margin: 0;
                 width: 40%;
               }
             }
+
             &:hover {
               border-bottom: 2px solid $메인컬러;
               transition: 0.3s;
+              display: block;
             }
+
             .nav {
               display: flex;
               flex-direction: column;
               align-items: center;
+
               li {
                 font-family: "GmarketSansLight", sans-serif;
                 display: none;
@@ -279,13 +306,12 @@ header {
                 background-color: rgba(255, 255, 255, 0.5);
               }
             }
-            &:hover li {
-              display: block;
-            }
           }
         }
+
         .mnav {
           display: none;
+
           @include respond($mobile767) {
             background: rgba(245, 245, 245, 0.5);
             text-align: center;
@@ -295,18 +321,22 @@ header {
             display: block;
             justify-content: center;
           }
-          > li {
+
+          >li {
             width: 200px;
             background: rgba(245, 245, 245, 0.5);
+
             &:hover {
               background: rgba(245, 245, 245, 0.1);
             }
-            &:nth-child(2) > a,
-            &:nth-child(3) > a {
+
+            &:nth-child(2)>a,
+            &:nth-child(3)>a {
               background-image: none;
               background-size: 0;
             }
-            > a {
+
+            >a {
               font-size: 1.25em;
               display: block;
               line-height: 2.5;
@@ -322,23 +352,28 @@ header {
               }
             }
           }
+
           .sub {
             position: absolute;
             display: none;
+
             @include respond($mobile767) {
               background: rgba(245, 245, 245, 0.1);
               position: static;
             }
+
             li {
               a {
                 @include respond($mobile767) {
                   display: block;
                   font-size: 1.2em;
                   text-align: center;
+
                   img {
                     width: 20%;
                   }
                 }
+
                 line-height: 2;
                 color: #222;
                 border-bottom: 1px solid #ddd;
@@ -347,10 +382,12 @@ header {
           }
         }
       }
+
       .subgnb {
         @include pos($p: absolute, $top: 0px);
         float: right;
         right: 0;
+
         li {
           width: 40px;
           margin: 0;
@@ -366,14 +403,17 @@ header {
   @include pos($p:relative, $top: 80px);
   z-index: 5;
   overflow: hidden;
+
   .banner {
     display: flex;
+
     li {
       img {
         width: 100%;
       }
     }
   }
+
   .btn {
     @include pos($p: absolute, $bottom: -55px);
     z-index: 5;
@@ -384,274 +424,353 @@ header {
     line-height: 150px;
     left: 50%;
     transform: translateX(-50%);
+
     ul {
       float: left;
       padding-top: 20px;
+
       li {
         float: left;
         width: 50px;
-        a {
-        }
+
+        a {}
       }
     }
   }
 }
+
 /*  section container*/
 section {
   padding: 35px 0;
 
-$icon: (ABOUT, GLOBAL, STORY, MAP, EVENT);
-.iconWrap {
-  ul {
-    display: flex;
-    padding-top: 35px;
-    text-align: center;
-    justify-content: space-around;
-    @include respond($mobile767) {
-      flex-wrap: wrap;
-      z-index: 8;
-    }
-    li {
-      a {
-        display: block;
-        width: 90px;
-        height: 90px;
-        margin: 0 auto;
-      }
-      @each $i in $icon {
-        &.#{$i} a {
-          background-image: url(../icon/icon_#{$i}.svg);
-          background-size: 100%;
-        }
-      }
-    }
-    .bg {
-      @each $i in $icon {
-        &.#{$i} a {
-          background-image: url(../icon/icon_0#{$i}.svg);
-          background-size: 100%;
-        }
-        .btn {
-          text-decoration-line: underline;
-        }
-      }
-    }
-  }
-}
+  $icon: (ABOUT, GLOBAL, STORY, MAP, EVENT);
 
-.itemWrap {
-  background: $서브컬러;
-  .List {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    padding-bottom: 35px;
-    padding-left: 7%;
-    li {
-      width: calc(100% / 3);
-      padding: 15px 0;
-      @include pos($p: relative);
+  .iconWrap {
+    ul {
+      display: flex;
+      padding: 30px 0 15px 0;
+      text-align: center;
+      justify-content: space-around;
+
       @include respond($mobile767) {
-        width: calc(100% / 2);
+        flex-wrap: wrap;
+        z-index: 8;
       }
-      > a {
-        img {
-          border-radius: 50%;
-          background-color: $설명글자;
-          width: 50%;
-        }
-      }
-      &:hover {
-        opacity: 0.7;
-      }
-      .btn {
-        @include pos($p: absolute, $top: 50%);
-        background-color: $메인컬러;
-        border-radius: 10px;
-        width: 70px;
-        height: 30px;
-        line-height: 30px;
-        left: 40%;
-        transform: translateX(-50%);
-        @include respond($mobile767) {
-          @include pos($top: 45%,$left:39%);
-        }
-        @include respond($mobile360) {
-          @include pos($top: 35%,$left:37%);
-        }
-        a {
-          color: $설명글자;
-        }
-        &:hover {
-          opacity: 0.6;
-        }
-      }
-      span {
-        a {
-          @include pos($p: relative, $top: 75%, $right: 33%);
-          z-index: 5;
-        }
-        a {
-          img {
-            width: 10%;
-          }
-          &:hover {
-            opacity: 0.4;
-            transition: 1s;
-          }
-        }
-      }
-    }
-  }
-}
-.reviewWrap {
-  p {
-    text-align: center;
-    padding: 15px 0;
-  }
-  iframe {
-    @include pos($p: relative);
-    left: 50%;
-    transform: translate(-50%);
-    @include respond($mobile767) {
-      width: 90%;
-    }
-  }
-  .textWrap {
-    width: 500px;
-    @include pos($p: relative);
-    left: 50%;
-    transform: translate(-50%);
-    .btn {
-      text-decoration-line: underline;
-      a:hover {
-        transition: 0.3s;
-        background-color: $서브컬러;
-      }
-    }
-    @include respond($mobile767) {
-      width: 95%;
-    }
-  }
-  .content {
-    padding: 15px 0;
-  }
-  .bar {
-    img {
-      padding-top: 15px;
-      width: 100%;
-    }
-  }
-}
-.newsWrap {
-  text-align: center;
-  .new {
-    display: flex;
-    padding: 35px;
-    .news {
-      position: relative;
-      margin: 0 0px;
-      padding: 10px;
-      border: 1px solid $설명글자;
-      border-radius: 10px;
-      background: $설명글자;
-    }
-    .news:nth-child(1) {
-      left: 10%;
-    }
-    .news:nth-child(2) {
-      left: 38%;
-    }
-    .news:nth-child(3) {
-      left: 65%;
-    }
-  }
-  @include respond($mobile767) {
-    .new {
-      position: absolute;
-      display: none;
-    }
-  }
-  .newsList {
-    display: flex;
-    justify-content: space-evenly;
-    li {
-      border: 1px solid $설명글자;
-      border-radius: 30px;
-      background: $설명글자;
 
-      img {
-        width: 100%;
-        border-radius: 30px 30px 0 0;
+      li {
+        a {
+          display: block;
+          width: 90px;
+          height: 90px;
+          margin: 0 auto;
+        }
+
+        @each $i in $icon {
+          &.#{$i} a {
+            background-image: url(../icon/icon_#{$i}.svg);
+            background-size: 100%;
+          }
+        }
       }
-      .title,
-      .date {
-        padding: 35px;
+
+      .bg {
+        @each $i in $icon {
+          &.#{$i} a {
+            background-image: url(../icon/icon_0#{$i}.svg);
+            background-size: 100%;
+          }
+
+          .btn {
+            text-decoration-line: underline;
+          }
+        }
       }
-      &:nth-child(2) {
-        padding: 0 0 35px 0;
+    }
+  }
+
+  .itemWrap {
+    background: $서브컬러;
+    text-align: center;
+
+    h2 {
+      padding: 35px 0;
+    }
+
+    .List {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-left: 7%;
+
+      li {
+        width: calc(100% / 3);
+        padding: 35px 0;
+        @include pos($p: relative);
+
+        @include respond($mobile767) {
+          width: calc(100% / 2);
+        }
+
+        >a {
+          img {
+            border-radius: 50%;
+            background-color: $설명글자;
+            width: 50%;
+          }
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        .btn {
+          @include pos($p: absolute, $top: 50%);
+          background-color: $메인컬러;
+          border-radius: 10px;
+          width: 70px;
+          height: 30px;
+          line-height: 30px;
+          left: 39%;
+          transform: translateX(-50%);
+
+          @include respond($mobile767) {
+            @include pos($top: 45%);
+          }
+
+          @include respond($mobile360) {
+            @include pos($top: 35%, $left:37%);
+          }
+
+          a {
+            color: $설명글자;
+          }
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+
+        span {
+          a {
+            @include pos($p: relative, $top: 75%, $right: 35%);
+            z-index: 5;
+          }
+
+          a {
+            img {
+              width: 10%;
+            }
+
+            &:hover {
+              opacity: 0.4;
+              transition: 1s;
+            }
+          }
+        }
       }
-      .morebtn {
+    }
+  }
+
+  .reviewWrap {
+    h2{
+      padding: 35px 0;
+      text-align: center;
+    }
+      p {
+      text-align: center;
+      padding: 0 0 35px 0;
+      line-height: 2;
+    }
+
+    iframe {
+      width: 700px;
+      height: 400px;
+      @include pos($p: relative);
+      left: 50%;
+      transform: translate(-50%);
+
+      @include respond($mobile767) {
+        width: 90%;
+      }
+    }
+
+    .textWrap {
+      width: 500px;
+      @include pos($p: relative);
+      left: 50%;
+      transform: translate(-50%);
+
+      p {
+        padding: 15px 0 0 0;
+        font-size: 16px;
+      }
+
+      .btn {
         text-decoration-line: underline;
+        padding: 0 0 15px 0;
+
         a:hover {
           transition: 0.3s;
           background-color: $서브컬러;
         }
       }
+
+      @include respond($mobile767) {
+        width: 95%;
+      }
     }
+
+    .content {
+      padding: 15px 0;
+    }
+
+    .bar {
+      img {
+        padding-top: 15px;
+        width: 100%;
+      }
+    }
+  }
+
+  .newsWrap {
+    text-align: center;
+
+    .new {
+      display: flex;
+      padding: 35px;
+
+      .news {
+        position: relative;
+        margin: 0;
+        padding: 10px;
+        margin: 0 0 35px 0;
+        border: 1px solid $설명글자;
+        border-radius: 10px;
+        background: $설명글자;
+      }
+
+      .news:nth-child(1) {
+        left: 10%;
+      }
+
+      .news:nth-child(2) {
+        left: 38%;
+      }
+
+      .news:nth-child(3) {
+        left: 65%;
+      }
+    }
+
     @include respond($mobile767) {
-      flex-direction: column;
-      gap: 35px;
-      .morebtn {
-        padding-bottom: 35px;
+      .new {
+        position: absolute;
+        display: none;
+      }
+    }
+
+    .newsList {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0 35px 0;
+
+      li {
+        border: 1px solid $설명글자;
+        border-radius: 30px;
+        background: $설명글자;
+
+        img {
+          width: 100%;
+          border-radius: 30px 30px 0 0;
+        }
+
+        .title,
+        .date {
+          padding: 35px;
+        }
+
+        &:nth-child(2) {
+          padding: 0 0 35px 0;
+        }
+
+        .morebtn {
+          text-decoration-line: underline;
+
+          a:hover {
+            transition: 0.3s;
+            background-color: $서브컬러;
+          }
+        }
+      }
+
+      @include respond($mobile767) {
+        flex-direction: column;
+        gap: 35px;
+
+        .morebtn {
+          padding-bottom: 35px;
+        }
+      }
+    }
+  }
+
+  .contentWrap {
+    background: $서브컬러;
+
+    .newList {
+      padding: 35px 0;
+      display: flex;
+      justify-content: space-evenly;
+      line-height: 2;
+
+      @include respond($mobile767) {
+        flex-wrap: wrap;
+      }
+
+      .subTitle {
+        font-size: 16px;
+        color: white;
+        padding: 35px 0;
+        width: 100%;
+      }
+
+      li {
+        width: 265px;
+
+        a {
+          color: #b5beb8;
+        }
+      }
+    }
+
+    .insta {
+      right: 0;
+      @include pos($p: absolute, $bottom: 0);
+
+      img {
+        padding: 0 35px;
+        width: 55px;
+      }
+    }
+  }
+
+  .siteWrap {
+    h2 {
+      padding: 35px;
+      text-align: center;
+
+      .sitename {
+        display: flex;
+
+        img {
+          margin: 35px;
+          width: 100%;
+        }
       }
     }
   }
 }
 
-.contentWrap {
-  background: $서브컬러;
-  .newsList {
-    padding: 35px 0;
-    display: flex;
-    justify-content: space-around;
-    @include respond($mobile767) {
-      flex-wrap: wrap;
-    }
-    .subTitle {
-      padding: 35px 0;
-    }
-    li {
-      padding: 35px 0;
-      width: 200px;
-      a {
-        color: #b5beb8;
-      }
-    }
-  }
-  .insta {
-    right: 0;
-    @include pos($p: absolute, $bottom: 0);
-    img {
-      padding: 0 35px;
-      width: 55px;
-    }
-  }
-}
-
-.siteWrap,
-h2 {
-  padding: 35px;
-  text-align: center;
-  .sitename {
-    display: flex;
-    img {
-      width: 100%;
-    }
-  }
-}
-}
 /* footer */
 footer {
   background: $메인컬러;
@@ -660,63 +779,79 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
   @include respond($mobile767) {
     justify-content: center;
     align-items: center;
+
     .bottom {
       padding: 0;
     }
   }
+
   h3 {
     padding: 35px 0;
   }
+
   p {
     padding-bottom: 15px;
   }
+
   .left {
     display: flex;
+
     .data {
       a {
         color: #fff;
+
         img {
           width: 100px;
         }
       }
     }
   }
+
   .center {
     display: flex;
     text-align: center;
     padding-right: 7%;
+
     @include respond($mobile767) {
       order: 1;
       padding-right: 0%;
     }
+
     .data {
       a {
         color: #fff;
       }
     }
+
     .bottom {
       padding-top: 80px;
       display: flex;
+
       li {
         padding: 0 15px;
       }
+
       @include respond($mobile767) {
         flex-wrap: wrap;
         justify-content: space-around;
       }
     }
   }
+
   .right {
     display: flex;
+
     .data {
       a {
         color: #fff;
       }
     }
   }
+
   .topBtn {
     @include pos($p: fixed, $right: 10px, $bottom: 10px);
     width: 50px;
